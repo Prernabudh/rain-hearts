@@ -62,7 +62,7 @@ export default function Home({ progress }) {
             <p>Click me</p>
           </div>
           <div className="card-back">
-            <p>I love you Eshant!</p>
+            <p>I love you!</p>
           </div>
         </div>
       </div>
