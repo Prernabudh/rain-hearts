@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap");
+
+.page {
+  display: flex;
+  flex: 1;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 250px;
+  height: 150px;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  position: relative;
+  cursor: pointer;
+}
+
+.card p {
+  color: white;
+  font-size: 1.2rem;
+  font-family: "Playwrite CU", cursive;
+}
+
+.card-front,
+.card-back {
+  width: 250px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.card-container.flipped .card {
+  transform: rotateY(180deg);
+}
+
+.card-front {
+  background-color: black;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(#f0a8d0, #f7b5ca, #ffc6c6), #ffebd4;
+}
+
+.heart {
+  color: #f0a8d0;
+  font-size: 25px;
+  position: absolute;
+  animation: heartMove linear 1;
+  top: -10vh;
+  z-index: 0;
+}
+
+@keyframes heartMove {
+  0% {
+    transform: translateY(-10vh);
+  }
+  100% {
+    transform: translateY(110vh);
+  }
+}
